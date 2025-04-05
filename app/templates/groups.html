@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}My Groups{% endblock %}
+{% block content %}
+<h1>My Groups</h1>
+{% if groups %}
+<ul>
+    {% for group in groups %}
+    <li>{{ group }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>You do not have access to view groups.</p>
+{% endif %}
+{% endblock %}
